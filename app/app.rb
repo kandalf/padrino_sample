@@ -4,12 +4,39 @@ class AlentemosARiver < Padrino::Application
   register Padrino::Mailer
   register Padrino::Helpers
 
+  use OmniAuth::Builder do
+    provider :twitter, 'aC0j2Yn8YSe9OqgCznEQ', 'RpR71pFJopt2ag2RRn6YttqUAkCIS2fsCFB2gTmQ'
+    #provider :facebook
+  end
+
   enable :sessions
 
   layout :application
 
   get :index do
     render 'home/index'
+  end
+
+  get '/auth/:provider/callback' do
+    auth_data = request.env["omniauth.auth"]
+
+    @user = User.find(:nickname => auth_data.info.nickname,
+                      :provider => params[:provider])
+
+    @user = User.create(:name => auth_data.info.name,
+                        :email => auth_data.info.email,
+                        :nickname => auth_data.info.nickname,
+                        :provider => params[:provider],
+                        :image => auth_data.info.image) if @user.nil?
+    redirect '/thanks'
+  end
+
+  get '/thanks' do
+    render 'home/thanks'
+  end
+
+  get '/todos' do
+    render 'home/todos'
   end
 
   ##

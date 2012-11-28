@@ -49,3 +49,23 @@ img#logo {
   background-color: rgba(226, 72, 64, 0.898);
   color: white;
   padding: 1em; }
+
+#users-list {
+  list-style: none;
+  vertical-align: top;
+  display: block; }
+
+.user-signature {
+  height: 5em;
+  line-height: 5em;
+  text-align: left;
+  vertical-align: top; }
+  .user-signature .image {
+    display: inline-block;
+    vertical-align: middle; }
+  .user-signature .nickname, .user-signature .date {
+    font-weight: bold;
+    display: inline-block;
+    padding-left: 2em; }
+  .user-signature .nickname {
+    width: 30em; }

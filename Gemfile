@@ -12,7 +12,11 @@ gem 'sinatra-flash', :require => 'sinatra/flash'
 gem 'sass'
 gem 'haml'
 gem 'sqlite3'
+gem 'pg'
 gem 'sequel'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'debugger'
 
 # Test requirements
 
