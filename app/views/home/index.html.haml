@@ -47,3 +47,15 @@
 
 %p
   <strong>SIEMPRE</strong>.
+
+#footer
+  %h3 Si quer&eacute;s demostrar tu apoyo, firm&aacute; con:
+  %a{ :href => "/auth/facebook" }
+    = image_tag 'facebook.png', :alt => "Firma con facebook"
+  %a{ :href => "/auth/twitter" }
+    = image_tag 'twitter.png', :alt => "Firma con twitter"
+
+  #signatures
+    %h4
+      %a{ :href => "/todos", :class => :link }
+        Mir&aacute; quienes ya firmaron!!

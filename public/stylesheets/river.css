@@ -69,3 +69,18 @@ img#logo {
     padding-left: 2em; }
   .user-signature .nickname {
     width: 30em; }
+
+.link {
+  color: white;
+  font-weight: bold;
+  text-decoration: none; }
+  .link:hover {
+    text-decoration: underline; }
+
+#footer {
+  padding-top: 2em; }
+  #footer #signatures {
+    float: right; }
+    #footer #signatures a {
+      font-weight: bold;
+      color: white; }

@@ -6,7 +6,7 @@ class AlentemosARiver < Padrino::Application
 
   use OmniAuth::Builder do
     provider :twitter, 'aC0j2Yn8YSe9OqgCznEQ', 'RpR71pFJopt2ag2RRn6YttqUAkCIS2fsCFB2gTmQ'
-    #provider :facebook
+    provider :facebook, '174018216072618', '99144a578cfbba0676e3f2f97824a571'
   end
 
   enable :sessions
@@ -28,10 +28,10 @@ class AlentemosARiver < Padrino::Application
                         :nickname => auth_data.info.nickname,
                         :provider => params[:provider],
                         :image => auth_data.info.image) if @user.nil?
-    redirect '/thanks'
+    redirect '/gracias'
   end
 
-  get '/thanks' do
+  get '/gracias' do
     render 'home/thanks'
   end
 
