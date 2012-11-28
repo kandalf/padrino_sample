@@ -1,0 +1,7 @@
+%ul#users-list
+  - User.all.each do |u|
+    %li.user-signature
+      .image
+        %img{ :src => u.image, :class => :avatar }
+      .nickname= u.nickname
+      .date= Time.now.to_date.to_s
