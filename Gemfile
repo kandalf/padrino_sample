@@ -16,7 +16,7 @@ gem 'pg'
 gem 'sequel'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
-gem 'debugger'
+gem 'debugger', :group => :development
 
 # Test requirements
 

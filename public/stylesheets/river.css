@@ -40,7 +40,7 @@ img#logo {
 
 #content {
   position: absolute;
-  top: 3em;
+  top: 2em;
   left: 3em;
   width: 60%;
   min-height: 75%;
@@ -49,6 +49,12 @@ img#logo {
   background-color: rgba(226, 72, 64, 0.898);
   color: white;
   padding: 1em; }
+
+.clear {
+  clear: both;
+  position: relative;
+  height: 1em;
+  line-height: 1em; }
 
 #users-list {
   list-style: none;
@@ -76,6 +82,9 @@ img#logo {
   text-decoration: none; }
   .link:hover {
     text-decoration: underline; }
+
+.right {
+  float: right; }
 
 #footer {
   padding-top: 2em; }
